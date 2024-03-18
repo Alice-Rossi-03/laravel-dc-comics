@@ -1,0 +1,102 @@
+.top{
+    background-color: #207CEC;
+    padding: 0.6em;
+
+    .cont{
+        width: 80%;
+        margin: 0 auto;
+
+        ul{
+            margin: 0;
+            display: flex;
+            gap: 1em;
+            justify-content: flex-end;
+            align-items: center;
+
+            li{
+                list-style-type: none;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+    }
+
+
+}
+
+
+.bg-white{
+    background-color: white;
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 8em;
+
+        .input-cont{
+            // margin-left: 2em;
+            display: flex;
+            align-items: center;
+            gap: 0.2em;
+
+            .search-bar{
+                border: 0;
+                outline: none;
+                border-bottom:2px solid #207CEC;
+                width: 200px;
+            }
+        }
+
+        figure{
+            align-self: center;
+            margin: 0;
+        }
+
+        ul{
+            display: flex;
+            gap: 1em;
+
+            li{
+                list-style-type: none;
+                font-size: 0.9em;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    height: 100% ;
+                    padding-bottom: 3.3em;
+
+                    &:hover{
+                        color: #207CEC;
+                        border-bottom: 0.5em solid #207CEC;
+                    }
+                }
+
+                .active{
+                    color: #207CEC;
+                    border-bottom: 0.5em solid #207CEC;
+                }
+            }
+
+        }
+    }
+
+
+
+}
+.bg-jumbotron{
+    // background-image: url("{{Vite::asset('resources/images/jumbotron.jpg)}}");
+    background-image: url('../images/jumbotron.jpg');
+    height: 20em;
+    // border: 1px solid red;
+    background-size: cover;
+    width: 100%;
+}
