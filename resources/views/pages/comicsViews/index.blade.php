@@ -12,8 +12,10 @@
         @foreach ( $comics as $element)
         <div class="comic">
             <img src="{{ $element->thumb }}" alt="{{ $element->title }}">
-            <div class="title" style="cursor: pointer;">{{ $element->title }}</div>
-            
+            <div class="title" style="cursor: pointer;">
+                <a href="{{route('comics.show', ['comic' => $element['id']])}}" class="comic-title">{{ $element->title }}</a>
+            </div>
+
         </div>
         @endforeach
 

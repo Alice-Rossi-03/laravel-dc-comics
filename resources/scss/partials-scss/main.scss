@@ -32,6 +32,35 @@ main{
         font-size: 1.3em;
     }
 
+    .card{
+        display: flex;
+        gap: 1em;
+        margin-top: 2em;
+        color: white;
+
+        figure{
+            width: 50%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        div{
+            h2{
+                color: #207CEC;
+            }
+            p{
+                margin-block: 1em;
+            }
+            small{
+                b{
+                    color: #207CEC;
+                }
+            }
+        }
+    }
+
     a{
         text-decoration: none;
         color: white;
@@ -53,6 +82,16 @@ main{
         .title{
             color: white;
             text-align: center;
+
+            .comic-title{
+                color: white;
+                background-color: transparent;
+                padding: 0;
+
+                &:hover{
+                    color: #207CEC;
+                }
+            }
         }
     }
 }
