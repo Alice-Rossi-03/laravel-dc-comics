@@ -1,8 +1,25 @@
 @extends('layouts.app')
 
-@section('content')
-<h4>hello laravel</h4>
+@section('title', 'Comics')
 
-<div></div>
+@section('content')
+
+<main>
+    <div class="container-1">
+
+        <div class="current-series">CURRENT SERIES</div>
+
+        @foreach ( $comics as $element)
+        <div class="comic">
+            <img src="{{ $element->thumb }}" alt="{{ $element->title }}">
+            <div class="title" style="cursor: pointer;">{{ $element->title }}</div>
+            
+        </div>
+        @endforeach
+
+
+        <a href="#">Load More</a>
+    </div>
+</main>
 
 @endsection

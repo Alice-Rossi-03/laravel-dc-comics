@@ -23,10 +23,10 @@
                     <a>CHARACTERS</a>
                 </li>
                 <li>
-                    <a class="active" href="{{route('homePage')}}">COMICS</a>
+                    <a href="{{route('homePage')}}">HOME</a>
                 </li>
                 <li>
-                    <a>MOVIES</a>
+                    <a href="{{route('comics.index')}}">COMICS</a>
                 </li>
                 <li>
                     <a>TV</a>
@@ -49,9 +49,7 @@
                 <li>
                     <a>SHOP</a>
                 </li>
-                <li>
-                    <a>ABOUT</a>
-                </li>
+
 
             </ul>
             <div class="input-cont">

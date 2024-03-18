@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
-@section('content')
-<h4>hello laravel</h4>
+@section('title', 'Home')
 
-<div></div>
+
+@section('content')
+
+<main>
+    <div class="home-page">
+        <h4>Welcome to our Comic App!</h4>
+
+        <h4>Enjoy!</h4>
+    </div>
+
+</main>
+
 
 @endsection
