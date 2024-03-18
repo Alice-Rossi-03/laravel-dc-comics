@@ -167,6 +167,36 @@ main{
             .comic{
                 width: calc((100% / 6) - 1em);
 
+                .options-cont{
+                    display: flex;
+                    gap: 0.2em;
+                    text-align: center;
+
+
+                    .edit{
+                        background-color: rgb(30, 110, 61);
+                        width: 100%;
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover{
+                            background-color: rgba(30, 110, 61, 0.619);
+                        }
+                    }
+
+                    .delete{
+                        background-color: rgb(132, 29, 29);
+                        color: white;
+                        width: 100%;
+                        text-decoration: none;
+
+                        &:hover{
+                            background-color: rgba(132, 29, 29, 0.693);
+                        }
+                    }
+                }
+
+
                 img{
                     width: 100%;
                     aspect-ratio: 3/4;
