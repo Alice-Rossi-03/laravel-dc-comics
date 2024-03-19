@@ -22,7 +22,7 @@
                     <div>
                         <a class='edit' href="">EDIT</a>
                     </div>
-                    <form action="" method="POST">
+                    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type='submit' class='delete' id="delete-button">DELETE</button>
