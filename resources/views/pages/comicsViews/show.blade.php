@@ -17,6 +17,18 @@
                 <h2>{{$comic->title}}</h2>
                 <p>{{$comic->description}}</p>
                 <small><b>Price:</b> {{$comic->price}} €</small>
+
+                <div class="options-cont">
+                    <div>
+                        <a class='edit' href="">EDIT</a>
+                    </div>
+                    <form action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type='submit' class='delete' id="delete-button">DELETE</button>
+                    </form>
+
+                </div>
             </div>
 
         </div>

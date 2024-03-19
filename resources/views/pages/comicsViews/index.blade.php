@@ -19,10 +19,7 @@
                     <div class="title" style="cursor: pointer;">
                         <a href="{{route('comics.show', ['comic' => $element['id']])}}" class="comic-title">{{ $element->title }}</a>
                     </div>
-                    <div class="options-cont">
-                        <a class='edit' href="">EDIT</a>
-                        <a class='delete' href="">DELETE</a>
-                    </div>
+
 
 
                 </div>

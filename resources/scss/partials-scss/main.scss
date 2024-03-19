@@ -94,6 +94,69 @@ main{
                     color: #207CEC;
                 }
             }
+            .options-cont{
+                display: flex;
+                justify-content: flex-end;
+                gap: 0.2em;
+                width: 100%;
+                position: relative;
+                left: 60%;
+                align-items: center;
+                text-align: center;
+                height: 2em;
+                font-family: 'PT Sans Narrow';
+
+
+                div{
+                    height: 100%;
+
+                    .edit{
+                        background-color: rgb(30, 110, 61);
+                        width: 10em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        height: 100%;
+                        font-size: 1em;
+                        text-decoration: none;
+
+                        &:hover{
+                            background-color: rgba(30, 110, 61, 0.619);
+                        }
+                    }
+                }
+
+
+
+                form{
+                    height: 100%;
+
+                    .delete{
+                        background-color: rgb(132, 29, 29);
+                        color: white;
+                        width: 10em;
+                        text-decoration: none;
+                        border: 0;
+                        font-family: 'PT Sans Narrow';
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        font-weight: 700;
+                        font-size: 1em;
+
+
+
+
+                        &:hover{
+                            background-color: rgba(132, 29, 29, 0.693);
+                        }
+                    }
+                }
+
+            }
+
         }
     }
 
@@ -166,35 +229,6 @@ main{
 
             .comic{
                 width: calc((100% / 6) - 1em);
-
-                .options-cont{
-                    display: flex;
-                    gap: 0.2em;
-                    text-align: center;
-
-
-                    .edit{
-                        background-color: rgb(30, 110, 61);
-                        width: 100%;
-                        color: white;
-                        text-decoration: none;
-
-                        &:hover{
-                            background-color: rgba(30, 110, 61, 0.619);
-                        }
-                    }
-
-                    .delete{
-                        background-color: rgb(132, 29, 29);
-                        color: white;
-                        width: 100%;
-                        text-decoration: none;
-
-                        &:hover{
-                            background-color: rgba(132, 29, 29, 0.693);
-                        }
-                    }
-                }
 
 
                 img{
