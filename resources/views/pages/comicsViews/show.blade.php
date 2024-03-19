@@ -20,7 +20,7 @@
 
                 <div class="options-cont">
                     <div>
-                        <a class='edit' href="">EDIT</a>
+                        <a class='edit' href="{{route('comics.edit', $comic->id)}}">EDIT</a>
                     </div>
                     <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                         @csrf
@@ -35,5 +35,16 @@
 
     </div>
 </main>
+
+
+<script>
+
+const deleteButton = document.getElementById('delete-button');
+
+deleteButton.addEventListener('click',function() {
+    alert('Are You Sure To Delete This Comic? The Action Is Irreversible');
+});
+
+</script>
 
 @endsection

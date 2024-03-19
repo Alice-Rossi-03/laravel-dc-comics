@@ -13,7 +13,7 @@
             @csrf
 
             <input type="text" name="title" id="title" placeholder="Insert The Title:">
-            <input type="textarea" name="description" id="description" placeholder="Insert The Description:">
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Insert The Description:"></textarea>
             <input type="text" name="thumb" id="thumb" placeholder="Insert The Comic Thumb:">
             <input type="number" name="price" id="price" placeholder="Insert The Price:" min="0">
             <input type="text" name="series" id="series" placeholder="Insert The Series:">
