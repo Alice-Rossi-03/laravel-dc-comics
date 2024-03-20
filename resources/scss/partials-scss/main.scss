@@ -266,3 +266,18 @@ main{
     }
 
 }
+
+#display-error{
+    width: 100%;
+    background-color: rgba(132, 29, 29, 0.693);
+    color: rgb(241, 172, 172);
+    padding: 1em;
+    margin-block: 1em;
+    border: 1px dashed rgb(241, 172, 172);
+
+    ul{
+        li{
+            margin-left: 1em;
+        }
+    }
+}

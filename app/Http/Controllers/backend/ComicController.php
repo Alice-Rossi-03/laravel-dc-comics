@@ -29,6 +29,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required',
+            'sale_date' => 'required',
+        ]);
+
+
         $addComic = $request->all();
 
         $newComic = new Comic();
@@ -60,6 +68,13 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required',
+            'sale_date' => 'required',
+        ]);
+
         $updateComic = $request->All();
         $comic->update($updateComic);
         return redirect()->route('comics.index', ['comic'=> $comic->id]);

@@ -13,14 +13,25 @@
                 @csrf
                 @method('PUT')
 
+                @if($errors->any())
+                    <div id="display-error">
+                        <ul>
+                            @foreach ( $errors->all() as $error )
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
                 <input type="text" name="title" id="title" placeholder="Insert The Title:"
-                    value="{{ old('title') ?? $comic->title }}">
-                
+                    value="{{ old('title') ?? $comic->title }}" >
+
                 <textarea name="description" id="description" cols="30" rows="10" placeholder="Insert The Description:">{{ old('description') ?? $comic->description }}</textarea>
                 <input type="text" name="thumb" id="thumb" placeholder="Insert The Comic Thumb:" value="{{ old('thumb') ?? $comic->thumb }}">
-                <input type="number" name="price" id="price" placeholder="Insert The Price:" min="0" value="{{ old('price') ?? $comic->price }}">
+                <input type="number" name="price" id="price" placeholder="Insert The Price:" min="0" value="{{ old('price') ?? $comic->price }}" >
                 <input type="text" name="series" id="series" placeholder="Insert The Series:" value="{{ old('series') ?? $comic->series }}">
-                <input type="date" name="sale_date" id="sale_date" placeholder="Insert A Sale Date:" value="{{ old('sale_date') ?? $comic->sale_date }}">
+                <input type="date" name="sale_date" id="sale_date" placeholder="Insert A Sale Date:" value="{{ old('sale_date') ?? $comic->sale_date }}" >
                 <input type="text" name="type" id="type" placeholder="Insert The Comic Type:" value="{{ old('type') ?? $comic->type }}">
 
                 <button class='addNewComic' type="submit">UPDATE</button>
