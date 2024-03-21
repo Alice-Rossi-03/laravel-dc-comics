@@ -4,36 +4,58 @@
 
 @section('content')
 
-<main>
-    <div class="container-1">
-        <div class="current-series">ADD A NEW COMIC:</div>
+    <main>
+        <div class="container-1">
+            <div class="current-series">ADD A NEW COMIC:</div>
 
-        <form action="{{route('comics.store')}}" method="POST">
+            <form action="{{ route('comics.store') }}" method="POST">
 
-            @csrf
+                @csrf
 
-            @if($errors->any())
-                <div id="display-error">
-                    <ul>
-                        @foreach ( $errors->all() as $error )
-                            <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+                <input type="text" name="title" id="title" placeholder="Insert The Title:" value="{{ old('title') }}">
+                @error('title')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
 
-            <input type="text" name="title" id="title" placeholder="Insert The Title:">
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Insert The Description:"></textarea>
-            <input type="text" name="thumb" id="thumb" placeholder="Insert The Comic Thumb:">
-            <input type="number" name="price" id="price" placeholder="Insert The Price:" min="0" >
-            <input type="text" name="series" id="series" placeholder="Insert The Series:">
-            <input type="date" name="sale_date" id="sale_date" placeholder="Insert A Sale Date:" >
-            <input type="text" name="type" id="type" placeholder="Insert The Comic Type:">
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Insert The Description:">{{ old('description') }}</textarea>
+                @error('description')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
 
-            <button class='addNewComic' type="submit">SEND</button>
-        </form>
+                <input type="text" name="thumb" id="thumb" placeholder="Insert The Comic Thumb:"
+                    value="{{ old('thumb') }}">
+                @error('thumb')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
 
-    </div>
-</main>
+                <input type="number" name="price" id="price" placeholder="Insert The Price:" min="0"
+                    value="{{ old('price') }}">
+                @error('price')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
+
+                <input type="text" name="series" id="series" placeholder="Insert The Series:"
+                    value="{{ old('series') }}">
+                @error('series')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
+
+                <input type="date" name="sale_date" id="sale_date" placeholder="Insert A Sale Date:"
+                    value="{{ old('sale_date') }}">
+                @error('date')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
+
+                <input type="text" name="type" id="type" placeholder="Insert The Comic Type:"
+                    value="{{ old('type') }}">
+                @error('type')
+                    <div class="display-error">{{ $message }} </div>
+                @enderror
+
+                <button class='addNewComic' type="submit">SEND</button>
+            </form>
+
+        </div>
+    </main>
 
 @endsection

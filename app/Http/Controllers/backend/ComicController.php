@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\backend;
+
 use App\Models\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::All();
-        return view('pages.comicsViews.index',compact('comics'));
+        return view('pages.comicsViews.index', compact('comics'));
     }
 
     /**
@@ -31,9 +32,13 @@ class ComicController extends Controller
     {
 
         $request->validate([
-            'title' => 'required',
+            'title' => 'required | max:255',
+            'description' => 'required',
+            'thumb' => 'nullable',
             'price' => 'required',
+            'series' => 'required',
             'sale_date' => 'required',
+            'type' => 'nullable',
         ]);
 
 
@@ -52,7 +57,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('pages.comicsViews.show',compact('comic'));
+        return view('pages.comicsViews.show', compact('comic'));
     }
 
     /**
@@ -70,14 +75,18 @@ class ComicController extends Controller
     {
 
         $request->validate([
-            'title' => 'required',
+            'title' => 'required | max:255',
+            'description' => 'required',
+            'thumb' => 'nullable',
             'price' => 'required',
+            'series' => 'required',
             'sale_date' => 'required',
+            'type' => 'nullable',
         ]);
 
         $updateComic = $request->All();
         $comic->update($updateComic);
-        return redirect()->route('comics.index', ['comic'=> $comic->id]);
+        return redirect()->route('comics.index', ['comic' => $comic->id]);
     }
 
     /**
